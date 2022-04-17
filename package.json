@@ -1,22 +1,22 @@
 {
-  "name": "hv-8",
+  "name": "hv8",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://SHEVEL0V.github.io/hv-08",
+  "homepage": "https://SHEVEL0V.github.io/hv08",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /hv-08/"
+    "build": "parcel build src/*.html --public-url /hv08/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SHEVEL0V/hv-08.git"
+    "url": "git+https://github.com/SHEVEL0V/hv08.git"
   },
   "keywords": [],
   "author": "Shevelov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SHEVEL0V/hv-08/issues"
+    "url": "https://github.com/SHEVEL0V/hv08/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
