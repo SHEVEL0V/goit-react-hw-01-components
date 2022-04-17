@@ -6,7 +6,7 @@
   "homepage": "https://SHEVEL0V.github.io/hv08",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /hv08/"
+    "build": "parcel build src/*.html --out-dir=docs"
   },
   "repository": {
     "type": "git",
