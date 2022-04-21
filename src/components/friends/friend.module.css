@@ -1,0 +1,47 @@
+.friendList{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    box-shadow: -7px -7px 16px 5px rgba(0,0,0,0.1),-7px 7px 16px 5px rgba(0,0,0,0.1),7px 7px 16px 5px rgba(0,0,0,0.1);
+
+    background-color: antiquewhite;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.item{
+    display: flex;
+    border-radius: 3px;
+    box-shadow: -7px -7px 16px 5px rgba(0,0,0,0.1),-7px 7px 16px 5px rgba(0,0,0,0.1),7px 7px 16px 5px rgba(0,0,0,0.1);
+    background-color: azure;
+
+    padding: 10px;
+ 
+    text-align: center;
+    
+}
+.item:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.true::after{
+    content:"\2022";
+    font-size: 60px;
+    color: red;
+
+}
+.false::after{
+    content:"\2022";
+    font-size: 70px;
+    color: rgb(62, 31, 186);
+
+}
+.name{
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.avatar{
+    height: auto;
+    width: 60px;
+}

@@ -1,5 +1,5 @@
 import Card from './cardPr';
-import infoProf from '../user.json';
+import infoProf from '../json/user.json';
 const {
   username,
   tag,

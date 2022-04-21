@@ -1,19 +1,14 @@
-import SectionCard from './section01/card'
-
+import Container from './container/container'
+import SectionCard from './profile/card'
+import SectionsStat from './statistics/statSection'
+import SectionFrends from './friends/friendsSection'
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        textTransform: 'uppercase',
-        color: '#010101',
-      }}
-    >
+    <Container>
+
       <SectionCard/>
-    </div>
+      <SectionsStat/>
+      <SectionFrends/>
+    </Container>
   );
 };
