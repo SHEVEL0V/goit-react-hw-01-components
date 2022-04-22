@@ -1,24 +1,37 @@
-import Card from './cardPr';
-import infoProf from '../json/user.json';
-const {
+import s from './card.module.css';
+
+export default function Card({
   username,
   tag,
   location,
   avatar,
-  stats: { followers, views, likes },
-} = infoProf;
-
-export default function SectionCard() {
+  followers,
+  views,
+  likes,
+}) {
   return (
-    <Card
-      key="1"
-      username={username}
-      tag={tag}
-      location={location}
-      avatar={avatar}
-      followers={followers}
-      views={views}
-      likes={likes}
-    />
+    <div className={s.profile}>
+      <div className="description">
+        <img src={avatar} alt="User avatar" className={s.avatar} />
+        <p className={s.name}>{username}</p>
+        <p className={s.tag}>@{tag}</p>
+        <p className={s.location}>{location}</p>
+      </div>
+
+      <ul className={s.stats}>
+        <li>
+          <span className={s.label}>Followers</span>
+          <span className="quantity"> {followers}</span>
+        </li>
+        <li>
+          <span className={s.label}>Views</span>
+          <span className="quantity"> {views}</span>
+        </li>
+        <li>
+          <span className={s.label}>Likes</span>
+          <span className="quantity"> {likes}</span>
+        </li>
+      </ul>
+    </div>
   );
 }

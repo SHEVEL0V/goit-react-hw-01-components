@@ -1,0 +1,34 @@
+.table{
+    width: 100%;
+    
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: -7px -7px 16px 5px rgba(0,0,0,0.1),-7px 7px 16px 5px rgba(0,0,0,0.1),7px 7px 16px 5px rgba(0,0,0,0.1);
+
+    
+}
+
+.table tr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 18px;
+    font-weight: 500;
+    
+
+    
+    
+}
+.table tr:nth-child(2n){
+    background-color: rgb(220, 225, 245);
+
+}
+
+
+.table th{
+    background-color: rgb(76, 96, 124);
+    color: rgb(233, 235, 235);
+    margin: 1px;
+    padding: 10px;
+    
+    
+}

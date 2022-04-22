@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from './statCard.module.css';
+import s from './stat_Card.module.css';
 
 export default function Stasistics({ data, title }) {
   return (

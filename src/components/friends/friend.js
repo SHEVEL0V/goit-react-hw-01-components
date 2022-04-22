@@ -1,16 +1,16 @@
 import s from './friend.module.css';
 
-export default function Friend({ avatar, name, isOnline, key }) {
+export default function Friend({ avatar, name, isOnline }) {
   return (
-    <li key={key} class={s.item}>
-      <span class={s[isOnline]}></span>
+    <li className={s.item}>
+      <span className={s[isOnline]}></span>
       <img
-        class={s.avatar}
+        className={s.avatar}
         src={avatar}
         alt="User avatar"
         width="48"
       />
-      <p class={s.name}>{name}</p>
+      <p className={s.name}>{name}</p>
     </li>
   );
 }

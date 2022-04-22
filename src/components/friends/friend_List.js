@@ -6,13 +6,12 @@ export default function FriendList({ data }) {
   return (
     <ul className={s.friendList}>
       {data.map(el => {
-        const { avatar, name, isOnline, id } = el;
         return (
           <Friend
-            avatar={avatar}
-            name={name}
-            isOnline={isOnline}
-            key={id}
+            key={el.id}
+            avatar={el.avatar}
+            name={el.name}
+            isOnline={el.isOnline}
           />
         );
       })}
@@ -23,5 +22,4 @@ Friend.propTypes = {
   avatar: PropTypes.string,
   name: PropTypes.string,
   isOnline: PropTypes.bool,
-  key: PropTypes.number,
 };
