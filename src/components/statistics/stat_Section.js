@@ -7,5 +7,6 @@ export default function SectionsStat() {
 }
 
 Statistics.propTypes = {
+  title: PropTypes.string,
   data: PropTypes.array.isRequired,
 };
