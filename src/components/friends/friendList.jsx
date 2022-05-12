@@ -5,13 +5,13 @@ import s from './friend.module.css';
 export default function FriendList({ friends }) {
   return (
     <ul className={s.list}>
-      {friends.map(el => {
+      {friends.map(({ id, avatar, name, isOnline }) => {
         return (
           <FriendListItem
-            key={el.id}
-            avatar={el.avatar}
-            name={el.name}
-            isOnline={el.isOnline}
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
           />
         );
       })}
@@ -20,5 +20,5 @@ export default function FriendList({ friends }) {
 }
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
+  friends: PropTypes.arrayOf({ id: PropTypes.number }).isRequired,
 };

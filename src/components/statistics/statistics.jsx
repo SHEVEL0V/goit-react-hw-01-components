@@ -6,7 +6,7 @@ export default function Stasistics({ data, title }) {
     <section className={stile.statistics}>
       {title && <h2 className="title">{title}</h2>}
       <ul className={stile.statList}>
-        {data.map(({id, label, percentage})=> {
+        {data.map(({ id, label, percentage }) => {
           return (
             <li key={id} className={stile.item}>
               <span className={stile.label}>{label}</span>
@@ -20,5 +20,10 @@ export default function Stasistics({ data, title }) {
 }
 
 Stasistics.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  title: PropTypes.string,
+  data: PropTypes.arrayOf({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }).isRequired,
 };

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import s from './card.module.css';
 
 export default function Profile({ username, tag, avatar, location, stats }) {
+  const { followers, views, likes } = stats;
   return (
     <div className={s.profile}>
       <div className="description">
@@ -14,15 +15,15 @@ export default function Profile({ username, tag, avatar, location, stats }) {
       <ul className={s.stats}>
         <li>
           <span className={s.label}>Followers</span>
-          <span className="quantity"> {stats.followers}</span>
+          <span className="quantity"> {followers}</span>
         </li>
         <li>
           <span className={s.label}>Views</span>
-          <span className="quantity"> {stats.views}</span>
+          <span className="quantity"> {views}</span>
         </li>
         <li>
           <span className={s.label}>Likes</span>
-          <span className="quantity"> {stats.likes}</span>
+          <span className="quantity"> {likes}</span>
         </li>
       </ul>
     </div>
@@ -34,5 +35,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+  stats: PropTypes.objectOf({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }).isRequired,
 };
