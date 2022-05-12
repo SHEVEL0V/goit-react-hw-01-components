@@ -1,16 +1,26 @@
 import Container from './container/container'
-import SectionCard from './profile/section_card'
-import SectionsStat from './statistics/stat_Section'
-import SectionFrends from './friends/friendsSection'
-import SectionTransaction from './history/section_History'
+import Profile from './profile/profileCard'
+import Statistics from './statistics/statistics';
+import FriendList from './friends/friendList';
+import TransactionHistory from './history/transactionsHistori'
+
+import user from '../data/user.json'
+import data from '../data/statistic.json'
+import friends from '../data/friend.json'
+import transactions from '../data/transactions.json'
+
 export const App = () => {
   return (
     <Container>
 
-      <SectionCard/>
-      <SectionsStat/>
-      <SectionFrends/>
-      <SectionTransaction/>
+      <Profile username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}/>
+      <Statistics data={data} title ="Upload stats"/>
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
 
     </Container>
   );

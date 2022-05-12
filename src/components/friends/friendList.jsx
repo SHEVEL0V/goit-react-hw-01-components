@@ -1,13 +1,13 @@
-import Friend from './friend';
+import FriendListItem from './friendListItem';
 import PropTypes from 'prop-types';
 import s from './friend.module.css';
 
-export default function FriendList({ data }) {
+export default function FriendList({ friends }) {
   return (
-    <ul className={s.friendList}>
-      {data.map(el => {
+    <ul className={s.list}>
+      {friends.map(el => {
         return (
-          <Friend
+          <FriendListItem
             key={el.id}
             avatar={el.avatar}
             name={el.name}
@@ -18,8 +18,7 @@ export default function FriendList({ data }) {
     </ul>
   );
 }
-Friend.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
