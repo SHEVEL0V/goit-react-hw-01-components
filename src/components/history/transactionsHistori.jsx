@@ -23,6 +23,6 @@ export default function TransactionHistory({ items }) {
   );
 }
 
-TransactionHistory.propTypes = {
-  item: PropTypes.arrayOf({ id: PropTypes.number }).isRequired,
+TransactionHistory.propType = {
+  items: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
 };

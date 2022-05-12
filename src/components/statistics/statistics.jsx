@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import stile from './statistics.module.css';
 
-export default function Stasistics({ data, title }) {
+export default function Statistics({ data, title }) {
   return (
     <section className={stile.statistics}>
       {title && <h2 className="title">{title}</h2>}
@@ -19,11 +19,13 @@ export default function Stasistics({ data, title }) {
   );
 }
 
-Stasistics.propTypes = {
+Statistics.propTypes = {
   title: PropTypes.string,
-  data: PropTypes.arrayOf({
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.number,
-  }).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    }).isRequired
+  ),
 };
